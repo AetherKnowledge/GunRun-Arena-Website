@@ -1,29 +1,18 @@
 html, body {
   height: 100%;
   margin: 0;
-  display: flex;
-  flex-direction: column;
   font-family: Arial, sans-serif;
   background: #1e1e1e;
   color: #fff;
-}
-
-header {
-  background: #2c2c2c;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  margin: 0;
-  font-size: 2.5em;
+  scroll-behavior: smooth;
 }
 
 main {
   flex: 1;
-  padding: 40px 20px;
-  max-width: 800px;
-  margin: auto;
+  padding: 40px 0;
+  width: 100%;
+  max-width: none;
+  margin: 0;
 }
 
 .description {
@@ -113,9 +102,21 @@ footer {
 
 /* Header Section */
 
+header {
+  background: #2c2c2c;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5em;
+}
+
 .sticky-header {
-  position: sticky;
+  position: fixed;
   top: 0;
+  left: 0;
   width: 100%;
   background: #2c2c2c;
   display: flex;
@@ -123,7 +124,7 @@ footer {
   padding: 1.5rem 2rem;
   z-index: 1000;
   box-shadow: 0 2px 8px rgba(0,0,0,0.2);
-  position: relative;
+  transition: top 0.3s;
 }
 
 .header-left {
@@ -131,6 +132,23 @@ footer {
   display: flex;
   align-items: center;
   min-width: 0;
+}
+
+.header-home-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  padding: 0;
+  font-family: 'PixelOperator8', monospace;
+  font-size: 1.5rem;
+  display: flex;
+  align-items: center;
+  transition: color 0.2s;
+}
+
+.header-home-btn:hover {
+  color: #007acc;
 }
 
 .header-center {
@@ -145,8 +163,8 @@ footer {
 
 .header-btn {
   background: none;
-  color: #fff;
   border: none;
+  color: #fff;
   padding: 0.5rem 1.2rem;
   font-family: 'PixelOperator8', monospace;
   font-size: 1rem;
@@ -160,18 +178,10 @@ footer {
   background: none;
 }
 
-main {
-  margin-top: 70px;
-}
-
-/* GunRun Arena Hero Section */
-
-html, body {
-      overflow-x: hidden;
-    }
+/* Hero Section */
 
 .hero-section {
-  min-height: 85vh;
+  min-height: 89vh;
   background: #111 url('images/gamebg.png') no-repeat center center/cover;
   display: flex;
   flex-direction: column;
@@ -202,4 +212,82 @@ html, body {
 
 .hero-updated strong {
   color: #fff;
+}
+
+
+/* Downloads Section */
+.downloads {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(20, 80, 120, 0.92);
+  margin: 0px 0 40px 0;
+  padding: 60px 0 40px 0;
+  width: 100%;  
+  max-width: none;
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+  position: relative;
+}
+
+.downloads-inner {
+  width: 100%;
+  max-width: 600px;
+  text-align: center;
+  padding: 0 20px;
+}
+
+.downloads-title {
+  font-size: 2.2rem;
+  color: #ffe7c6;
+  margin-bottom: 24px;
+  letter-spacing: 1px;
+}
+
+.downloads-desc {
+  font-size: 1.2rem;
+  color: #fff;
+  margin-bottom: 32px;
+  line-height: 1.6;
+}
+
+.downloads-btn-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 18px;
+  justify-content: center;
+  margin-bottom: 0;
+}
+
+.download-btn.pixel-font {
+  background: #111;
+  color: #ffe7c6;
+  border: 2px solid #ffe7c6;
+  border-radius: 12px;
+  font-size: 1.1rem;
+  padding: 18px 28px;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-family: 'PixelOperator8', monospace;
+  font-weight: bold;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.18);
+  transition: background 0.2s, color 0.2s, transform 0.15s;
+}
+
+.download-btn.pixel-font:hover {
+  background: #ffe7c6;
+  color: #111;
+  transform: translateY(-4px) scale(1.04);
+  border-color: #ffe7c6;
+}
+
+
+@media (max-width: 700px) {
+  .downloads-inner { max-width: 98vw; }
+  .downloads-title { font-size: 1.3rem; }
+  .downloads-desc { font-size: 1rem; }
+  .download-btn.pixel-font { font-size: 0.95rem; padding: 14px 10px; }
+  .downloads { padding: 30px 5px 20px 5px; }
 }

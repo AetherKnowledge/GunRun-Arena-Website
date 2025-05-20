@@ -9,47 +9,52 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <!-- PixelOperator8 font -->
     <link rel="stylesheet" href="fonts/PixelOperator8.css">
+    <!-- Link the external JavaScript file -->
+    <script src="index.js" defer></script>
   </head>
   <body>
 
     <header class="sticky-header">
       <div class="header-left">
-        <span class="pixel-font">GunRun Arena</span>
+        <button class="header-home-btn" id="back-to-top">GunRun Arena</button>
       </div>
       <div class="header-center">
-        <button class="header-btn">Home</button>
-        <button class="header-btn">Download</button>
-        <button class="header-btn">Gallery</button>
+        <button class="header-btn" onclick="document.getElementById('download').scrollIntoView({behavior:'smooth'})">Download</button>
+        <button class="header-btn" onclick="document.getElementById('gallery').scrollIntoView({behavior:'smooth'})">Gallery</button>
+        <button class="header-btn" onclick="document.getElementById('credits').scrollIntoView({behavior:'smooth'})">Credits</button>
       </div>
-    </header>
-
-    <section class="hero-section">
-      <div>
-        <div class="hero-title">GunRun Arena</div>
-        <div class="hero-subtitle">Download GunRun Arena & Play With Friends</div>
-      </div>
-    </section>
+    </header> 
 
     <main>
-      <section class="description">
-        <p><strong>GunRun Arena</strong> is a fast-paced 2D platformer shooter designed for online multiplayer battles. Developed as a System Integration and Architecture (SIA) project, it allows players to host or join LAN games with friends.</p>
+      <section class="hero-section">
+        <div>
+          <div class="hero-title">GunRun Arena</div>
+          <div class="hero-subtitle">Download GunRun Arena & Play With Friends</div>
+        </div>
       </section>
 
-      <section class="downloads">
-        <a class="download-btn" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena.exe" download>
-          <i class="fab fa-windows"></i> Download for Windows
-        </a>
-        <a class="download-btn" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena.apk" download>
-          <i class="fab fa-android"></i> Download for Android
-        </a>
-        <a class="download-btn" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena-Server.x86_64" download>
-          <i class="fab fa-linux"></i> Download for Linux
-        </a>
-        <a class="download-btn" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena-Server.x86_64" download>
-          <i class="fas fa-server"></i> Download Dedicated Server
-        </a>
+      <section class="downloads" id="download">
+        <div class="downloads-inner">
+          <h2 class="downloads-title pixel-font">Download The Game</h2>
+          <p class="downloads-desc pixel-font">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni, fugit consequatur ad quaerat ea sapiente optio quisquam adipisci, dolores perferendis quae dolore reprehenderit inventore voluptates nulla eligendi iure magnam? Expedita.
+          </p>
+          <div class="downloads-btn-group">
+            <a class="download-btn pixel-font" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena.exe" download>
+              <i class="fab fa-windows"></i> Download for Windows
+            </a>
+            <a class="download-btn pixel-font" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena.apk" download>
+              <i class="fab fa-android"></i> Download for Android
+            </a>
+            <a class="download-btn pixel-font" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena.x86_64" download>
+              <i class="fab fa-linux"></i> Download for Linux
+            </a>
+            <a class="download-btn pixel-font" href="https://github.com/AetherKnowledge/GunRun-Arena/releases/download/v1.0.1/GunRun-Arena-Server.x86_64" download>
+              <i class="fas fa-server"></i> Dedicated Server
+            </a>
+          </div>
+        </div>
       </section>
-    </main>
 
     <footer>
       <p>
